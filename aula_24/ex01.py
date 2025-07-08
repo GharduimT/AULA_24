@@ -49,13 +49,15 @@ try:
     print('Dados concatenados com sucesso')
     print('Iniciando a gravação do arquivo Parquet')
 
-    df_bolsa_familia.write_parquet(ENEDERECO_DAD0S_BRONZE + 'Bbolsa_familia.parquet')
+    df_bolsa_familia.write_parquet(ENEDERECO_DAD0S_BRONZE + 'Bbolsa_familia.parquet') #  cria na pasta bronze um arquivo compactado dos dados coletados
     print(df_bolsa_familia.head())
     print(df_bolsa_familia.shape)
 
     del df_bolsa_familia
 
     gc.collect()
+
+    print('Gravação do arquivo Parquet concluída com sucesso')
 
     fim = datetime.now()
 
